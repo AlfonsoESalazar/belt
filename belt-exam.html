@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel=stylesheet href="belt-exam.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <div class="top-row">
+            <div class="contents">
+                <div class="logo">
+                    <img class="heart" src="assets/heart-light.png">
+                    <h1>Pet Shelter</h1>
+                </div>
+                <div class="nav-bar">
+                    <h3>Find a pet</h3>
+                    <h3>About</h3>
+                    <button onclick="remove()" id="donate">Donate</button>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-row">
+            <div class="search">
+                <ul class="pet-type">
+                    <li class="looking">I'm looking for a...</li>
+                    <li class="type">
+                        <img src="assets/paw-light.png" class="paw">
+                        <select onchange="selectPet(this)" class="select">
+                            <option value="any">Any pet</option>
+                            <option value="dog">Dog</option>
+                            <option value="cat">Cat</option>
+                        </select>
+                    </li>
+                </ul>
+                <ul class="location">
+                    <li class="looking">in or near...</li>
+                    <li class="type">
+                        <img src="assets/pin-light.png" class="pin">
+                        <input class="zip" type="text" placeholder="City or Zip code"> 
+                    </li>
+                </ul>
+                <button class="find">Find my new best friend</button>
+            </div>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="pepper">
+            <img class="pets" src="assets/pepper.jpg">
+            <ul class="list description">
+                <li class="pet-name">Pepper</li>
+                <li>Pepper is a slightly shy gray tabby, but she really loves showing her human affection.</li>
+            </ul>
+            <ul class="list">
+                <li class="amount"><span id="one">3</span> petting(s)</li>
+                <li><button onclick="like('one')" id="pet-me">Pet Pepper</button></li>
+            </ul>
+        </div>
+        <div class="bruce">
+            <img class="pets" src="assets/bruce.jpg">
+            <ul class="list description">
+                <li class="pet-name">Bruce</li>
+                <li>Bruce is a loyal companion. He loves long walks and cold weather.</li>
+            </ul>
+            <ul class="list">
+                <li class="amount"><span id="two">5</span> petting(s)</li>
+                <li><button onclick="like('two')" id="pet-me">Pet Bruce</button></li>
+            </ul>
+        </div>
+        <div class="oscar">
+            <img class="pets" src="assets/oscar.jpg">
+            <ul class="list description">
+                <li class="pet-name">Oscar</li>
+                <li>Oscar is bright, energetic, and friendly. He is looking for a good home.</li>
+            </ul>
+            <ul class="list">
+                <li class="amount"><span id="three">8</span> petting(s)</li>
+                <li><button onclick="like('three')" id="pet-me">Pet Oscar</button></li>
+            </ul>
+        </div>
+    </div>
+    <script src="belt-exam.js"></script>
+</body>
+</html>
